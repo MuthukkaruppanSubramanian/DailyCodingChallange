@@ -12,6 +12,7 @@ require 'stringio'
 #  2. 2D_INTEGER_ARRAY cases
 #
 
+#Solution1
 def serviceLane(n, cases, width)
     # Write your code here
     allowedWidth = []
@@ -22,6 +23,14 @@ def serviceLane(n, cases, width)
         end
         finalResult << allowedWidth.sort.first
         allowedWidth = []
+    end
+    return finalResult
+end
+
+def serviceLane(n, cases, width)
+    finalResult = []
+    cases.each do |tcase|
+        finalResult << width.slice(tcase[0],((tcase[1]-tcase[0])+1)).sort.first
     end
     return finalResult
 end
