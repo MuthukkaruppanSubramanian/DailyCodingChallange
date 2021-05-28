@@ -27,6 +27,7 @@ def serviceLane(n, cases, width)
     return finalResult
 end
 
+#Solution2
 def serviceLane(n, cases, width)
     finalResult = []
     cases.each do |tcase|
